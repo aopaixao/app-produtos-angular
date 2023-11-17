@@ -1,0 +1,16 @@
+<p>produto works!</p>
+<section class="results">
+  <section class="listing"
+    *ngFor="let produtoInterface of produtoInterfaceList"
+  >
+    <img class="listing-photo" [src]="produtoInterface.images[0]" alt="Photo of {{produtoInterface.title}}">
+    <h2 class="listing-heading">{{ produtoInterface.title }}</h2>
+    <h3 class="listing-heading">Price: ${{ produtoInterface.price }}</h3>
+    <p class="listing-location">{{ produtoInterface.description}}</p>
+  </section>
+</section>
+<app-pagination
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (pageChanged)="onPageChange($event)"
+></app-pagination>

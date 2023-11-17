@@ -1,0 +1,10 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <button (click)="changePage(currentPage - totalPages)" [disabled]="currentPage === 1">Anterior</button>
+    </li>
+    <li class="page-item">
+      <button (click)="changePage(currentPage + totalPages)" >Próxima</button>
+    </li>
+  </ul>
+</nav>
